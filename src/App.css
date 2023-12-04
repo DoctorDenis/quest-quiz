@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+label {
+  display: grid;
+  grid-template-columns: auto;
+
+}
+
+.image {
+  display: block;
+  border-radius: 50%;
+}
+
+[name="word"] {
+  margin: 1rem;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.true {
+  border: 2px solid green;
+}
