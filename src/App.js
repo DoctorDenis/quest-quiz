@@ -27,8 +27,6 @@ function App() {
           e.preventDefault();
           setResult(checkAnswer(e));
           setInputText(e.target.elements.word.value);
-          // e.target.elements.word.validity = checkAnswer(e);
-          console.log(e.target.elements.word.validity);
         }}
       >
         <label className="label">
