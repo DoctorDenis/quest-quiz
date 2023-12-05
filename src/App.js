@@ -27,6 +27,8 @@ function App() {
           e.preventDefault();
           setResult(checkAnswer(e));
           setInputText(e.target.elements.word.value);
+          // e.target.elements.word.validity = checkAnswer(e);
+          console.log(e.target.elements.word.validity);
         }}
       >
         <label className="label">
@@ -35,13 +37,20 @@ function App() {
           <input
             type="text"
             name="word"
-            className={!result && inputText.length !== 0 ? "true" : "false"}
+            className={!result && inputText.length ? "false" : "true"}
           />
         </label>
-        <button type="submit">Перевірити</button>
+        <button className="submit button" type="submit">
+          Перевірити
+        </button>
       </form>
-      {result && <h1>Акваріум</h1>}
-      {!result && inputText.length !== 0 ? <h1>Спробуйте ще ... 😉</h1> : null}
+      {result && (
+        <>
+          <p className="greeting">Правильно! Слово підказка:</p>
+          <h1 className="answer">Акваріум</h1>
+        </>
+      )}
+      {!result && inputText.length ? <h1>Ні. Спробуйте ще ... 😉</h1> : null}
     </div>
   );
 }
